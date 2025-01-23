@@ -182,13 +182,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This paper introduces a new imitation learning framework based on energy-based generative models capable of generating complex, life-like, physics-dependent motions, through state-only expert motion trajectories. 
-            Our algorithm, called Noise-conditioned Energy-based Annealed Rewards (NEAR), constructs several perturbed versions of the expert's motion data distribution and learns smooth, and well-defined representations of the data distribution's energy function 
-            using denoising score matching. We propose to use these learnt energy functions as reward functions to learn imitation policies via reinforcement learning. We also present a strategy to gradually switch between the learnt energy functions, 
-            ensuring that the learnt rewards are always well-defined in the manifold of policy-generated samples, thereby improving the learnt policies. 
-            We evaluate our algorithm on complex humanoid tasks such as locomotion and martial arts and compare it with state-only adversarial imitation learning algorithms like Adversarial Motion Priors (AMP). 
-            Our framework sidesteps the optimisation challenges of conventional generative imitation learning techniques and produces results comparable to AMP in several quantitative metrics across multiple tasks. 
-            Finally, a portion of this paper also analyses the optimisation challenges of adversarial imitation learning algorithms, and discusses some previously under-explored failure modes, providing rigorous empirical results to back our argumentation. 
+            This paper introduces a new imitation learning framework based on energy-based generative models capable of learning complex, physics-dependent, 
+            robot motion policies through state-only expert motion trajectories. 
+            Our algorithm, called Noise-conditioned Energy-based Annealed Rewards (NEAR), constructs several perturbed versions of the expert’s motion 
+            data distribution and learns smooth, and well-defined representations of the data distribution’s energy function using denoising score matching. 
+            We propose to use these learnt energy functions as reward functions to learn imitation policies via reinforcement learning. 
+            We also present a strategy to gradually switch between the learnt energy functions, ensuring that the learnt rewards are always well-defined in the 
+            manifold of policy-generated samples. We evaluate our algorithm on complex humanoid tasks such as locomotion and martial arts and compare 
+            it with state-only adversarial imitation learning algorithms like Adversarial Motion Priors (AMP). 
+            Our framework sidesteps the optimisation challenges of adversarial imitation learning techniques and produces results comparable to 
+            AMP in several quantitative metrics across multiple imitation settings.
           </p>
         </div>
       </div>
@@ -291,14 +294,20 @@
 
      <div class="image-block-container" style="display: flex; justify-content: center; align-items: center;">
       <div class="image-block" style="text-align: center;">
-          <img src="static/images/new_illustration.png" alt="Image 1" width="70%">
+          <img src="static/images/ICLR_paper_S0_conditioned_v3.png" alt="Image 1" width="70%">
       </div>
   </div>
   
       <!-- Common Caption for images -->
       <div class="video-grid-row-caption">
-        <h3>An illustration of NEAR and AMP reward functions in a 2D target reaching task. NEAR learns a much more accurate representation of $p_D$, 
-          is smoother in the space, and does not depend on the policy-generated samples to learn the reward function.</h3>
+        <h3>A comparison of reward functions (probability density approximations) learnt in a 2D target-reaching imitation task (left). 
+          In this task, an agent aims to reach a goal and expert demonstrations ($p_D$) pass through an L-shaped maze. 
+          The learnt reward function is expected to encourage the agent to pass through the maze. 
+          In the middle, we show $\texttt{rew}(s′ \vert s)$ for all reachable states around a state $s$ (green circle) at different training epochs. 
+          On the right, we show an illustration of the non- smooth reward landscape of adversarial IL. 
+          The energy-based reward is a smooth (with continuous gradients), accurate representation of $p_D$ and is constant regardless of the distribution of policy- generated motions ($p_G$). 
+          In contrast, the adversarial reward is non-smooth and prone to instability. 
+          Additionally, it changes depending on $p_G$ (the discriminator tends to minimise policy predictions) and can provide non-stationary reward signals.</h3>
       </div>
       <!-- <br><br>
       Below, we show comparisons between the policies learnt using NEAR and those learnt using Adversarial Motion Priors (AMP) [2]. -->
@@ -401,7 +410,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-widescreen content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@inproceedings{diwan2025noise,
+        title={Noise-conditioned Energy-based Annealed Rewards (NEAR): A Generative Framework for Imitation Learning from Observation},
+        author={Diwan, Anish Abhijit and Urain, Julen and Kober, Jens and Peters, Jan},
+        booktitle={The Thirteenth International Conference on Learning Representations},
+        year={2025},
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
