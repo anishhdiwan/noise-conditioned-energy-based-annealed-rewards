@@ -60,6 +60,9 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
   </script>
 
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
 </head>
 <body>
 
@@ -69,27 +72,35 @@
       <div class="container is-max-widescreen">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Noise-conditioned Energy-based Annealed Rewards (NEAR)</h1>
-            <span>
-              In International Conference on Learning Representations (ICLR) 2025
-            </span>
-            <br><br>
+            <!-- <h3 class="subtitle is-4 publication-title" style="margin-bottom: 1.5em;">Conference Paper at ICLR 2025</h3> -->
+
+            <h3 class="subtitle is-4 publication-title gradient-text">
+              Conference Paper at ICLR 2025
+          </h3>
+          
+
+            <h1 class="title is-2 publication-title">Noise-conditioned Energy-based Annealed Rewards (NEAR)</h1>
+            <h2 class="subtitle is-3 publication-title">A Generative Framework for Imitation Learning from Observation</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://www.anishdiwan.com/" target="_blank">Anish Abhijit Diwan * </a><sup style="font-size:50%">1</sup>,</span>
+                <a href="https://www.anishdiwan.com/" target="_blank">Anish Abhijit Diwan *</a><sup style="font-size:50%">1</sup>, </span>
                 <span class="author-block">
-                  <a href="https://robotgradient.com/" target="_blank">Julen Urain</a><sup style="font-size:50%">2</sup>,</span>
+                  <a href="https://robotgradient.com/" target="_blank">Julen Urain</a><sup style="font-size:50%">2,5</sup>, </span>
                   <span class="author-block">
-                    <a href="http://jenskober.de/index.php" target="_blank">Jens Kober </a><sup style="font-size:50%">1</sup>,
+                    <a href="http://jenskober.de/index.php" target="_blank">Jens Kober</a><sup style="font-size:50%">1</sup>, 
                   </span>
                     <span class="author-block">
-                      <a href="https://www.ias.informatik.tu-darmstadt.de/Team/JanPeters" target="_blank">Jan Peters </a><sup style="font-size:50%">2</sup>,
+                      <a href="https://www.ias.informatik.tu-darmstadt.de/Team/JanPeters" target="_blank">Jan Peters</a><sup style="font-size:50%">2,3,4,5</sup>,
                     </span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup style="font-size:50%">1</sup> Cognitive Robotics, TU Delft<br><sup style="font-size:50%">2</sup> Intelligent Autonomous Systems, TU Darmstadt
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block"><sup style="font-size:50%">1</sup> Cognitive Robotics, TU Delft &nbsp;<sup style="font-size:50%">2</sup> Intelligent Autonomous Systems, TU Darmstadt
+                      <br>
+                      <sup style="font-size:50%">3</sup>Hessian Center for Artificial Intelligence (Hessian.ai) &nbsp;
+                      <sup style="font-size:50%">4</sup>Center for Cognitive Science, TU Darmstadt<br>
+                      <sup style="font-size:50%">5</sup>German Research Center for AI (DFKI)<br>
                     </span>
                     <br>
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
@@ -151,6 +162,15 @@
                   </a>
               </span> 
 
+              <span class="link-block">
+                <a href="#citation-anchor"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" style="vertical-align: middle; font-size: 15px;">&#128196;</span>
+                    <span style="vertical-align: middle;">Cite</span>
+                </a>
+            </span> 
+
+
             </div>
           </div>
         </div>
@@ -161,20 +181,25 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-widescreen">
     <div class="hero-body" style="text-align: center;">
       <video poster="" id="tree" autoplay controls muted loop style="width: 70%; height: auto;">
-        <!-- Your video here -->
+
         <source src="static/videos/near_run.mp4"
         type="video/mp4">
       </video>
-      <!-- <h2 class="subtitle has-text-centered">
+      <h2 class="subtitle has-text-centered">
         Running imitation policy learnt using NEAR.
-      </h2> -->
+      </h2>
     </div>
   </div>
-</section>
+</section> -->
+<div class="image-block-container" style="display: flex; justify-content: center; align-items: center;">
+  <div class="image-block" style="text-align: center;">
+      <img src="static/images/NEAR_collage.png" alt="Collage of policy snapshots" width="50%">
+  </div>
+</div>
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -208,7 +233,7 @@
     <div class="rows">
       <div class="rows is-centered">
         <div class="row is-full-width">
-          <h2 class="title is-3"><span class="dvima">NEAR Policies</span></h2>
+          <h2 class="title is-3"><span class="dvima">Videos of NEAR Policies</span></h2>
           <div class="level-set has-text-justified">
           <p>
             This demo shows the policies learnt using NEAR in several contact-rich, physics-dependent imitation tasks. We use the open-source Isaac Gym 
@@ -407,12 +432,10 @@
 </section>
 
 
-
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-widescreen content">
-      <h2 class="title">BibTeX</h2>
+      <h2 id="citation-anchor" class="title">BibTeX</h2>
       <pre><code>@inproceedings{diwan2025noise,
         title={Noise-conditioned Energy-based Annealed Rewards (NEAR): A Generative Framework for Imitation Learning from Observation},
         author={Diwan, Anish Abhijit and Urain, Julen and Kober, Jens and Peters, Jan},
@@ -442,14 +465,12 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
+          <!-- <h4 class="title">Acknowledgement</h4> -->
           <p>
 
             The authors acknowledge the use of computational resources of the DelftBlue supercomputer, provided by <a href="https://www.tudelft.nl/dhpc" target="_blank">Delft High Performance Computing Centre</a>. 
-            <br><br>
-            Some of the data used in this project was obtained from <a href="http://mocap.cs.cmu.edu/" target="_blank">mocap.cs.cmu.edu</a>. The database was created with funding from NSF EIA-0196217.
-            <br><br>
-            Some of the data used in this project was obtained from <a href="http://mocap.cs.sfu.ca" target="_blank">mocap.cs.sfu.ca</a>. The database was created with funding from NUS AcRF R-252-000-429-133 and SFU President’s Research Start-up Grant.
+
+            The data used in this project was obtained from (i) <a href="http://mocap.cs.cmu.edu/" target="_blank">mocap.cs.cmu.edu</a> (created with funding from NSF EIA-0196217) and (ii) <a href="http://mocap.cs.sfu.ca" target="_blank">mocap.cs.sfu.ca</a> (created with funding from NUS AcRF R-252-000-429-133 and SFU President’s Research Start-up Grant).
             <br><br>
             <small><small>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>. This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.</small></small>

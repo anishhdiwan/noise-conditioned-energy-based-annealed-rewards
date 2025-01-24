@@ -50,6 +50,11 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
+.publication-subtitle {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 400; /* Adjust the value as needed */
+}
+
 .publication-authors {
     font-family: 'Google Sans', sans-serif;
 }
@@ -325,3 +330,9 @@ video::-ms-fullscreen-button {
   margin-bottom: 20px; /* Add space below the video container */
 }
 
+.gradient-text {
+  background: linear-gradient(to left, #FF2222, #00CFE2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; /* Optional for better emphasis */
+}
